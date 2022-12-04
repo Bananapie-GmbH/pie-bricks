@@ -1,13 +1,13 @@
 import 'package:shopper/src/core/interfaces/shopper_service.dart';
 {{#withApi}}
 import 'package:shopper/src/core/api/shopper_api.dart';
-{{/isStateless}}
+{{/withApi}}
 
 class {{name.pascalCase()}}Service extends IShopperService {
 
   {{#withApi}}
   final api = useApi();
-  {{/isStateless}}
+  {{/withApi}}
 
   {{name.pascalCase()}}Service._();
   static final instance = {{name.pascalCase()}}Service._();
