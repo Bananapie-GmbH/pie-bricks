@@ -1,5 +1,5 @@
-name: create
-description: A new brick created with the Mason CLI.
+name: plugin
+description: Plugin Template.
 
 # The following defines the version and build number for your brick.
 # A version number is three numbers separated by dots, like 1.2.34
@@ -23,6 +23,9 @@ environment:
 vars:
   name:
     type: string
-    description: Your name
-    default: Dash
-    prompt: What is your name?
+    description: The plugin name
+    prompt: Please enter the plugin name.
+  withApi:
+    type: boolean
+    description: Decide if shopper api should be incluced
+    prompt: Do you want to add the Shopper Api?
