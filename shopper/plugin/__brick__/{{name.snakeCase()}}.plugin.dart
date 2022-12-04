@@ -1,4 +1,6 @@
 import 'package:shopper/src/core/interfaces/shopper_plugin.dart';
+import 'package:shopper/src/core/api/models/shopper_context.dart';
+
 {{#withApi}}
 import 'package:shopper/src/core/api/shopper_api.dart';
 {{/withApi}}
@@ -14,6 +16,14 @@ class {{name.pascalCase()}} extends IShopperPlugin {
 
   factory {{name.pascalCase()}}() {
     return instance;
+  }
+
+  @override
+  void initialize(
+    ShopperContext context, {
+    bool debug = false,
+  }) async {
+    // todo set shopname
   }
 
 }
