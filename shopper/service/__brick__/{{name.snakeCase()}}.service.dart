@@ -19,5 +19,5 @@ class {{name.pascalCase()}}Service extends IShopperService {
 }
 
 {{name.pascalCase()}}Service use{{name.pascalCase()}}() {
-  return {{name.pascalCase()}}();
+  return {{name.pascalCase()}}Service();
 }
