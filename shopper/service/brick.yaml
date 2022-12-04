@@ -25,7 +25,7 @@ vars:
     type: string
     description: The service name
     prompt: Please enter the service name.
-  isApiService:
+  withApi:
     type: boolean
-    description: Is this a api service
-    prompt: Do you want to create a Shopper API Service?
+    description: Decide if shopper api should be incluced
+    prompt: Do you want to add the Shopper Api?
