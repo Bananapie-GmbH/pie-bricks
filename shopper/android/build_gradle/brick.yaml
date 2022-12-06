@@ -1,5 +1,5 @@
-name: state
-description: Creates a new Cubit with corresponding state.
+name: build_gradle
+description: Creates the build gradle with customizable settings.
 
 # The following defines the version and build number for your brick.
 # A version number is three numbers separated by dots, like 1.2.34
@@ -21,7 +21,7 @@ environment:
 #  * an optional prompt phrase used when asking for the variable
 #  * a list of values (enums only)
 vars:
-  name:
+  appName:
     type: string
-    description: Enter Cubit name
-    prompt: What is your cubit name?
+    description: Your app name
+    prompt: What is your app name?
