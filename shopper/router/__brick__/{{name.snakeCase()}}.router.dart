@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:shopper/shopper.dart';
 import 'package:flutter/material.dart';
-part '{{name_snakeCase()}}.gr.dart';
+part '{{name.snakeCase()}}.gr.dart';
 
 @MaterialAutoRouter(
   replaceInRouteName: 'Page,Route',
