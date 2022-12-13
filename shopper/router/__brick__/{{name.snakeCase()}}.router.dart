@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:shopper/shopper.dart';
 import 'package:flutter/material.dart';
-part 'app_router.gr.dart';
+part '{{name_snakeCase()}}.gr.dart';
 
 @MaterialAutoRouter(
   replaceInRouteName: 'Page,Route',
@@ -110,8 +110,6 @@ part 'app_router.gr.dart';
         ])
   ],
 )
-class AppRouter extends _$AppRouter {
-  {{#useAuthGuard}}
-  AppRouter({required super.authGuard});
-   {{/useAuthGuard}}
+class {{name.pascalCase()}}Router extends _${{name.pascalCase()}}Router {
+
 }

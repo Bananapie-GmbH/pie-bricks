@@ -1,7 +1,4 @@
-import 'package:shopper/src/core/interfaces/shopper_service.dart';
-{{#withApi}}
-import 'package:shopper/src/core/api/shopper_api.dart';
-{{/withApi}}
+import 'package:shopper/shopper.dart';
 
 class {{name.pascalCase()}}Service extends IShopperService {
 
