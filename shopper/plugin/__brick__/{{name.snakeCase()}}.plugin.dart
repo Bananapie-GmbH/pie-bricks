@@ -14,7 +14,7 @@ class {{name.pascalCase()}} extends IShopperPlugin {
   }
 
   @override
-  void initialize(
+  Future<void> initialize(
     ShopperContext context, {
     bool debug = false,
   }) async {
