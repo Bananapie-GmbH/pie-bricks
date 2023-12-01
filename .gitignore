@@ -1,3 +1,4 @@
 .mason
 *.json
+*.env
 mason.yaml
