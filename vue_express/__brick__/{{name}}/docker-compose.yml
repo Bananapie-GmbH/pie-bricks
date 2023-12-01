@@ -1,0 +1,49 @@
+version: '3.7'
+services:
+  mysql:
+    image: mysql:8.0
+    env_file: .env.development.local
+    container_name: mysql
+    ports:
+      - '${DB_PORT:-3306}:3306'
+    networks:
+      - shared-network
+    volumes:
+      - ./0000_init.sql:/docker-entrypoint-initdb.d/init.sql
+      - mysql_db_data:/var/lib/mysql/
+  admin:
+    container_name: admin
+    build:
+      context: admin/
+      dockerfile: Dockerfile
+      target: development-build-stage
+    command: 'npm run dev'
+    ports:
+      - '4000:4000'
+    volumes:
+      - './admin:/app'
+      - '/app/node_modules'
+    networks:
+      - shared-network
+  api:
+    build:
+      context: api/
+      dockerfile: Dockerfile
+      target: development-build-stage
+    container_name: api
+    ports:
+      - '${PORT:-3000}:3000'
+    env_file: .env.development.local
+    volumes:
+      - './api:/app'
+      - '/app/node_modules'
+    networks:
+      - shared-network
+    depends_on:
+      - mysql
+    hostname: api
+networks:
+  shared-network:
+    external: false
+volumes:
+  mysql_db_data: {}
