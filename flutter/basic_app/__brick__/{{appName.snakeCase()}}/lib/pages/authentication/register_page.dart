@@ -38,7 +38,7 @@ class _RegisterPageState extends State<RegisterPage> {
   AppBar buildAppBar() {
     return AppBar(
       centerTitle: true,
-      title: const Text("{{appName}}"),
+      title: const Text("{{appName.titleCase()}}"),
       actions: [
         if (page == 2)
           GestureDetector(
@@ -116,7 +116,7 @@ class _RegisterPageState extends State<RegisterPage> {
           color: Colors.yellow,
         ),
         child: const Text(
-          "MIT EMAIL ANMELDEN",
+          "Login with Email",
           style: kButtonStyle,
         ),
       ),
@@ -246,7 +246,7 @@ class _RegisterPageState extends State<RegisterPage> {
                           buildRegisterButton(context),
                           const SizedBox(height: 10),
                           const Text(
-                            "ODER MIT",
+                            "OR",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 16,
@@ -373,6 +373,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                   }
                                 },
                               ),
+                              // Uncomment if Facebook Login needed
                               // const SizedBox(width: 20),
                               // buildSocialButton(
                               //   const Icon(

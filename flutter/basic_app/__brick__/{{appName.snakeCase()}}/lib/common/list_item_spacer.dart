@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:hiddentable/interfaces/list_item.dart';
+import '../interfaces/list_item.dart';
 
 class ListItemSpacer extends ListItem {
   ListItemSpacer({

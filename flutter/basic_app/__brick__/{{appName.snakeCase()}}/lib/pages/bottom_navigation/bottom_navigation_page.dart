@@ -3,10 +3,11 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hiddentable/models/bottom_bar_navigation_item.dart';
-import 'package:hiddentable/pages/bottom_navigation/cubit/bottom_navigation_cubit.dart';
-import 'package:hiddentable/pages/home/widgets/home_page.dart';
-import 'package:hiddentable/pages/profile/widgets/profile_page.dart';
+
+import '../../models/bottom_bar_navigation_item.dart';
+import '../home/widgets/home_page.dart';
+import '../profile/widgets/profile_page.dart';
+import 'cubit/bottom_navigation_cubit.dart';
 
 @RoutePage()
 class BottomNavigationPage extends StatefulWidget {

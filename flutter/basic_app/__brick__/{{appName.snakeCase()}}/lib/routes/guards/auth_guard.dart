@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:hiddentable/routes/app_router.dart';
+
+import '../app_router.dart';
 
 class AuthGuard extends AutoRouteGuard {
   @override

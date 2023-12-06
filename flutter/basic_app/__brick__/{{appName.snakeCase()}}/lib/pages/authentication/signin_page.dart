@@ -2,9 +2,10 @@ import 'package:auto_route/auto_route.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:hiddentable/pages/authentication/password_recover_page.dart';
-import 'package:hiddentable/routes/app_router.dart';
-import 'package:hiddentable/services/authentication.service.dart';
+
+import '../../routes/app_router.dart';
+import '../../services/authentication.service.dart';
+import 'password_recover_page.dart';
 
 @RoutePage()
 class SigninPage extends StatefulWidget {

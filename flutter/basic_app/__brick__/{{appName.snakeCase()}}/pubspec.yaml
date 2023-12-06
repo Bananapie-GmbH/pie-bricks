@@ -39,38 +39,39 @@ dependencies:
   firebase_messaging: ^14.6.8
   firebase_crashlytics: ^3.3.6
   firebase_analytics: ^10.5.0
+  firebase_in_app_messaging: ^0.7.3+6
+  dio_cache_interceptor: ^3.4.2
+  dio_cache_interceptor_hive_store: ^3.2.1
   auto_route: ^7.8.3
   retrofit: ^4.0.1
-  font_awesome_flutter: ^10.4.0
   google_sign_in: ^6.1.3
   flutter_facebook_auth: ^6.0.1
   flutter_bloc: ^8.1.3
   bloc: ^8.1.2
   intl: ^0.18.1
-  google_maps_flutter: ^2.3.0
-  dots_indicator: ^3.0.0
-  sliver_tools: ^0.2.10
-  lottie: ^2.4.0
-  add_2_calendar: ^2.2.3
-  map_launcher: ^2.5.0+1
-  geolocator: ^9.0.2
   dio: ^5.3.3
   json_annotation: ^4.8.1
-  flutter_stripe: ^9.4.0
-  vibration: ^1.8.1
   flutter_inappwebview: ^5.7.2+3
-  cached_network_image: ^3.2.3
-  shimmer: ^3.0.0
   flutter_local_notifications: ^15.1.1
   path_provider: ^2.1.1
-  firebase_in_app_messaging: ^0.7.3+6
-  dio_cache_interceptor: ^3.4.2
-  dio_cache_interceptor_hive_store: ^3.2.1
   hive: ^2.2.3
   flutter_native_splash: ^2.3.3
-  share_plus: ^7.1.0
-  in_app_review: ^2.0.8
   smooth_page_indicator: ^1.1.0
+  vibration: ^1.8.1
+  shimmer: ^3.0.0
+  dots_indicator: ^3.0.0
+  cached_network_image: ^3.2.3
+  font_awesome_flutter: ^10.6.0
+  # Uncomment if add to calendar function needed
+  # add_2_calendar: ^2.2.3
+  # Uncomment if stripe needed
+  # flutter_stripe: ^9.4.0
+  # Uncomment if in app review Function needed
+  # in_app_review: ^2.0.8
+  # Uncomment if Share Function needed
+  # share_plus: ^7.1.0
+  # Uncomment if Google Map needed
+  # google_maps_flutter: ^2.3.0
 
 
  
@@ -100,12 +101,11 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
-  assets: 
-  - assets/png/
-  - assets/image/
-  - assets/json/
-  - assets/text/map_style.txt
-  - lib/.env 
+  # assets: 
+  # - assets/png/
+  # - assets/image/
+  # - assets/json/
+  # - lib/.env 
 
   # To add assets to your application, add an assets section, like this:
   # assets:
@@ -137,64 +137,64 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-  fonts:
-    - family: Montserrat
-      fonts:
-        - asset: assets/fonts/montserrat/Montserrat-Black.ttf
-          weight: 900
-        - asset: assets/fonts/montserrat/Montserrat-BlackItalic.ttf
-          weight: 900
-          style: italic
-        - asset: assets/fonts/montserrat/Montserrat-ExtraBold.ttf
-          weight: 800
-        - asset: assets/fonts/montserrat/Montserrat-ExtraBoldItalic.ttf
-          weight: 800
-          style: italic
-        - asset: assets/fonts/montserrat/Montserrat-Bold.ttf
-          weight: 700
-        - asset: assets/fonts/montserrat/Montserrat-BoldItalic.ttf
-          weight: 700
-          style: italic
-        - asset: assets/fonts/montserrat/Montserrat-SemiBold.ttf
-          weight: 600
-        - asset: assets/fonts/montserrat/Montserrat-SemiBoldItalic.ttf
-          weight: 600
-          style: italic
-        - asset: assets/fonts/montserrat/Montserrat-Medium.ttf
-          weight: 500
-        - asset: assets/fonts/montserrat/Montserrat-MediumItalic.ttf
-          weight: 500
-          style: italic
-        - asset: assets/fonts/montserrat/Montserrat-Regular.ttf
-          weight: 400
-        - asset: assets/fonts/montserrat/Montserrat-Italic.ttf
-          weight: 400
-          style: italic
-        - asset: assets/fonts/montserrat/Montserrat-Light.ttf
-          weight: 300
-        - asset: assets/fonts/montserrat/Montserrat-LightItalic.ttf
-          weight: 300
-          style: italic
-        - asset: assets/fonts/montserrat/Montserrat-ExtraLight.ttf
-          weight: 200
-        - asset: assets/fonts/montserrat/Montserrat-ExtraLightItalic.ttf
-          weight: 200
-          style: italic
-        - asset: assets/fonts/montserrat/Montserrat-Thin.ttf
-          weight: 100
-        - asset: assets/fonts/montserrat/Montserrat-ThinItalic.ttf
-          weight: 100
-          style: italic
-    - family: Ramillas
-      fonts:
-        - asset: assets/fonts/TT-Ramillas-Bold.ttf
-          weight: 600
-    - family: Hiddentable
-      fonts:
-        - asset: assets/fonts/Hiddentable.ttf
-    - family: HiddentableCloche
-      fonts:
-        - asset: assets/fonts/HiddentableCloche.ttf
-    - family: HiddentableIcons2
-      fonts:
-        - asset: assets/fonts/HiddentableIcons2.otf
+  # fonts:
+  #   - family: Montserrat
+  #     fonts:
+  #       - asset: assets/fonts/montserrat/Montserrat-Black.ttf
+  #         weight: 900
+  #       - asset: assets/fonts/montserrat/Montserrat-BlackItalic.ttf
+  #         weight: 900
+  #         style: italic
+  #       - asset: assets/fonts/montserrat/Montserrat-ExtraBold.ttf
+  #         weight: 800
+  #       - asset: assets/fonts/montserrat/Montserrat-ExtraBoldItalic.ttf
+  #         weight: 800
+  #         style: italic
+  #       - asset: assets/fonts/montserrat/Montserrat-Bold.ttf
+  #         weight: 700
+  #       - asset: assets/fonts/montserrat/Montserrat-BoldItalic.ttf
+  #         weight: 700
+  #         style: italic
+  #       - asset: assets/fonts/montserrat/Montserrat-SemiBold.ttf
+  #         weight: 600
+  #       - asset: assets/fonts/montserrat/Montserrat-SemiBoldItalic.ttf
+  #         weight: 600
+  #         style: italic
+  #       - asset: assets/fonts/montserrat/Montserrat-Medium.ttf
+  #         weight: 500
+  #       - asset: assets/fonts/montserrat/Montserrat-MediumItalic.ttf
+  #         weight: 500
+  #         style: italic
+  #       - asset: assets/fonts/montserrat/Montserrat-Regular.ttf
+  #         weight: 400
+  #       - asset: assets/fonts/montserrat/Montserrat-Italic.ttf
+  #         weight: 400
+  #         style: italic
+  #       - asset: assets/fonts/montserrat/Montserrat-Light.ttf
+  #         weight: 300
+  #       - asset: assets/fonts/montserrat/Montserrat-LightItalic.ttf
+  #         weight: 300
+  #         style: italic
+  #       - asset: assets/fonts/montserrat/Montserrat-ExtraLight.ttf
+  #         weight: 200
+  #       - asset: assets/fonts/montserrat/Montserrat-ExtraLightItalic.ttf
+  #         weight: 200
+  #         style: italic
+  #       - asset: assets/fonts/montserrat/Montserrat-Thin.ttf
+  #         weight: 100
+  #       - asset: assets/fonts/montserrat/Montserrat-ThinItalic.ttf
+  #         weight: 100
+  #         style: italic
+  #   - family: Ramillas
+  #     fonts:
+  #       - asset: assets/fonts/TT-Ramillas-Bold.ttf
+  #         weight: 600
+  #   - family: Hiddentable
+  #     fonts:
+  #       - asset: assets/fonts/Hiddentable.ttf
+  #   - family: HiddentableCloche
+  #     fonts:
+  #       - asset: assets/fonts/HiddentableCloche.ttf
+  #   - family: HiddentableIcons2
+  #     fonts:
+  #       - asset: assets/fonts/HiddentableIcons2.otf

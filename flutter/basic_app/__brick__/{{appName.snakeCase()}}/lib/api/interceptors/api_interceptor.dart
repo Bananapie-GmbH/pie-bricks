@@ -2,13 +2,12 @@ import 'dart:developer';
 import 'package:dio/dio.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-class HiddentableApiInterceptor extends Interceptor {
+class ApiInterceptor extends Interceptor {
   @override
   void onRequest(
       RequestOptions options, RequestInterceptorHandler handler) async {
     try {
       final idtoken = await FirebaseAuth.instance.currentUser?.getIdToken();
-      // log(idtoken.toString());
       options.headers["accept"] = "application/json";
       options.headers["Authorization"] = "Bearer $idtoken";
     } catch (e) {

@@ -2,10 +2,11 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:hiddentable/pages/home/cubit/home_page_cubit.dart';
-import 'package:hiddentable/services/authentication.service.dart';
 
 import 'dart:developer' as developer;
+
+import '../../../services/authentication.service.dart';
+import '../cubit/home_page_cubit.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

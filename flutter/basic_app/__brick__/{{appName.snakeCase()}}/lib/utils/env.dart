@@ -1,5 +1,6 @@
 class Env {
   static const String baseUrl = String.fromEnvironment("baseUrl");
-  static const String stripePublishableKey =
-      String.fromEnvironment("stripePublishableKey");
+  //  add stripePublishableKey if Stripe is being used
+  // static const String stripePublishableKey =
+  //     String.fromEnvironment("stripePublishableKey");
 }

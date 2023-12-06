@@ -2,15 +2,16 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-import 'package:hiddentable/pages/bottom_navigation/cubit/bottom_navigation_cubit.dart';
-import 'package:hiddentable/pages/splash_screens/animated_splash_screen.dart';
-import 'package:hiddentable/pages/splash_screens/splash_screen.dart';
-import 'package:hiddentable/routes/app_router.dart';
-import 'package:hiddentable/services/local_notification.service.dart';
-import 'package:hiddentable/utils/resolve_notification_payload.dart';
 
-class HiddentableApp extends StatefulWidget {
-  HiddentableApp({
+import 'pages/bottom_navigation/cubit/bottom_navigation_cubit.dart';
+import 'pages/splash_screens/animated_splash_screen.dart';
+import 'pages/splash_screens/splash_screen.dart';
+import 'routes/app_router.dart';
+import 'services/local_notification.service.dart';
+import 'utils/resolve_notification_payload.dart';
+
+class App extends StatefulWidget {
+  App({
     super.key,
     required this.appRouter,
     required this.bottomNavigationCubit,
@@ -19,10 +20,10 @@ class HiddentableApp extends StatefulWidget {
   final BottomNavigationCubit bottomNavigationCubit;
 
   @override
-  State<HiddentableApp> createState() => _HiddentableAppState();
+  State<App> createState() => _AppState();
 }
 
-class _HiddentableAppState extends State<HiddentableApp> {
+class _AppState extends State<App> {
   Future<void> resolveCloudMessageOnStartUp() async {
     // Get any messages which caused the application to open from a terminated state.
     RemoteMessage? initialMessage =
@@ -68,7 +69,7 @@ class _HiddentableAppState extends State<HiddentableApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: '{{appName.}}',
+      title: '{{appName.titleCase()}}',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,

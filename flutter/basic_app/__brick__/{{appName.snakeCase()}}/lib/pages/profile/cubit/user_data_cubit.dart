@@ -1,8 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hiddentable/models/user_data/user_data.dart';
-import 'package:hiddentable/services/authentication.service.dart';
+
+import '../../../models/user_data/user_data.dart';
+import '../../../services/authentication.service.dart';
 
 part 'user_data_state.dart';
 

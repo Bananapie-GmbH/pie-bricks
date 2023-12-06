@@ -1,6 +1,7 @@
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:hiddentable/pages/bottom_navigation/cubit/bottom_navigation_cubit.dart';
-import 'package:hiddentable/routes/app_router.dart';
+
+import '../pages/bottom_navigation/cubit/bottom_navigation_cubit.dart';
+import '../routes/app_router.dart';
 
 void resolveNotificationPayload(
   String type,

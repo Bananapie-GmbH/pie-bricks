@@ -126,7 +126,7 @@ class _ProfilePersonalDataInputPageState
               padding: const EdgeInsets.symmetric(
                 horizontal: 20,
               ),
-              child: widget.title == "Geburtstag"
+              child: widget.title == "Birthday"
                   ? SizedBox(
                       height: 200,
                       child: CupertinoDatePicker(
@@ -144,7 +144,7 @@ class _ProfilePersonalDataInputPageState
                     )
                   : TextField(
                       controller: controller,
-                      keyboardType: widget.title == "Mobilnummer"
+                      keyboardType: widget.title == "Mobile"
                           ? TextInputType.number
                           : null,
                       textInputAction: TextInputAction.done,

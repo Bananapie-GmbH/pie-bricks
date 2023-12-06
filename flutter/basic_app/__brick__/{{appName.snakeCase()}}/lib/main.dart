@@ -6,18 +6,16 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:flutter_stripe/flutter_stripe.dart';
-import 'package:hiddentable/firebase_options.dart';
-import 'package:hiddentable/hiddentable_app.dart';
-import 'package:hiddentable/pages/bottom_navigation/cubit/bottom_navigation_cubit.dart';
-import 'package:hiddentable/pages/profile/cubit/user_data_cubit.dart';
-import 'package:hiddentable/routes/app_router.dart';
-import 'package:hiddentable/services/api.service.dart';
-import 'package:hiddentable/services/local_notification.service.dart';
-import 'package:hiddentable/utils/env.dart';
-import 'package:hiddentable/utils/resolve_notification_payload.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:path_provider/path_provider.dart';
+import 'app.dart';
+import 'firebase_options.dart';
+import 'pages/bottom_navigation/cubit/bottom_navigation_cubit.dart';
+import 'pages/profile/cubit/user_data_cubit.dart';
+import 'routes/app_router.dart';
+import 'services/api.service.dart';
+import 'services/local_notification.service.dart';
+import 'utils/resolve_notification_payload.dart';
 
 double devicePixelRatio = 1.0;
 
@@ -25,12 +23,12 @@ void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
-  Stripe.publishableKey = Env.stripePublishableKey;
-  Stripe.merchantIdentifier = 'merchant.com.hiddentable.de';
+  // Stripe.publishableKey = Env.stripePublishableKey;
+  // Stripe.merchantIdentifier = 'merchant.com.hiddentable.de';
   final appRouter = AppRouter();
   final BottomNavigationCubit bottomNavigationCubit = BottomNavigationCubit();
 
-  await Stripe.instance.applySettings();
+  // await Stripe.instance.applySettings();
   await initializeDateFormatting('de_DE', null);
   await _initializeApi();
   await _initializeFirebase();
@@ -55,7 +53,7 @@ void main() async {
           create: (context) => UserDataCubit(),
         ),
       ],
-      child: HiddentableApp(
+      child: App(
         appRouter: appRouter,
         bottomNavigationCubit: bottomNavigationCubit,
       ),
