@@ -22,12 +22,13 @@ void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
+  // if Stripe needed uncomment this part
   // Stripe.publishableKey = Env.stripePublishableKey;
   // Stripe.merchantIdentifier = 'merchant.{{packageName.lowerCase()}}';
+  // await Stripe.instance.applySettings();
   final appRouter = AppRouter();
   final BottomNavigationCubit bottomNavigationCubit = BottomNavigationCubit();
 
-  // await Stripe.instance.applySettings();
   await initializeDateFormatting('de_DE', null);
   await _initializeApi();
   await _initializeFirebase();

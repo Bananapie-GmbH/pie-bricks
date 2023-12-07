@@ -39,7 +39,6 @@ class _PasswordRecoverPageState extends State<PasswordRecoverPage> {
                 "Reset Password",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.white,
                   fontWeight: FontWeight.w700,
                   fontSize: 20,
                 ),
@@ -75,7 +74,6 @@ class _PasswordRecoverPageState extends State<PasswordRecoverPage> {
                   cursorColor: Colors.black,
                   autocorrect: false,
                   style: const TextStyle(
-                    color: Colors.white,
                     fontWeight: FontWeight.w700,
                     fontSize: 12,
                   ),

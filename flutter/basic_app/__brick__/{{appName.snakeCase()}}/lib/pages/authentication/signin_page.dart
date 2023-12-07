@@ -33,7 +33,7 @@ class _SigninPageState extends State<SigninPage> {
   AppBar buildAppBar() {
     return AppBar(
       centerTitle: true,
-      title: const Text("{{appName.titleCase()}}"),
+      title: const Text("Superpie"),
     );
   }
 
@@ -50,8 +50,9 @@ class _SigninPageState extends State<SigninPage> {
             password: passwordController.text,
           );
 
-          var userData =
-              await useAuthenticationService().login(isAnonymous: false);
+          // Uncomment this after the Endpoint for that is implemented
+          // var userData =
+          //     await useAuthenticationService().login(isAnonymous: false);
 
           setState(() {
             isloggingin = false;
@@ -135,7 +136,6 @@ class _SigninPageState extends State<SigninPage> {
                 const Text(
                   "Login",
                   style: TextStyle(
-                    color: Colors.white,
                     fontWeight: FontWeight.w700,
                     fontSize: 40,
                   ),
@@ -149,7 +149,6 @@ class _SigninPageState extends State<SigninPage> {
                     const Text(
                       "Email",
                       style: TextStyle(
-                        color: Colors.white,
                         fontWeight: FontWeight.w700,
                         fontSize: 15,
                       ),
@@ -186,7 +185,6 @@ class _SigninPageState extends State<SigninPage> {
                         cursorColor: Colors.black,
                         autocorrect: false,
                         style: const TextStyle(
-                          color: Colors.white,
                           fontWeight: FontWeight.w700,
                           fontSize: 12,
                         ),
@@ -222,7 +220,6 @@ class _SigninPageState extends State<SigninPage> {
                     const Text(
                       "Password",
                       style: TextStyle(
-                        color: Colors.white,
                         fontWeight: FontWeight.w700,
                         fontSize: 15,
                       ),
@@ -252,6 +249,10 @@ class _SigninPageState extends State<SigninPage> {
                             }
                           }
                         },
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w700,
+                          fontSize: 12,
+                        ),
                         controller: passwordController,
                         cursorColor: Colors.black,
                         obscureText: !_passwordVisible,
@@ -279,7 +280,6 @@ class _SigninPageState extends State<SigninPage> {
                               _passwordVisible
                                   ? Icons.visibility
                                   : Icons.visibility_off,
-                              color: Colors.white,
                             ),
                             onPressed: () {
                               // Update the state i.e. toogle the state of passwordVisible variable
@@ -360,7 +360,7 @@ class _SigninPageState extends State<SigninPage> {
                         const TextSpan(
                           text: "New here? ",
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.black,
                             fontWeight: FontWeight.w700,
                             fontSize: 14,
                           ),

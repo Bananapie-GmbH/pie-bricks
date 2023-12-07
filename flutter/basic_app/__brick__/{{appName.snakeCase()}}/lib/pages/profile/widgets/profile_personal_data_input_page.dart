@@ -32,13 +32,6 @@ class _ProfilePersonalDataInputPageState
   @override
   void initState() {
     controller = TextEditingController(text: widget.value);
-    if (widget.title == "Geburtstag") {
-      setState(() {
-        birthday = widget.value != null
-            ? DateFormat("yyyy-MM-dd").parse(widget.value ?? "")
-            : DateTime.now();
-      });
-    }
 
     super.initState();
   }
@@ -64,37 +57,14 @@ class _ProfilePersonalDataInputPageState
                   isLoading = true;
                 });
                 switch (widget.title) {
-                  case "Firstname":
+                  case "Username":
                     await BlocProvider.of<UserDataCubit>(context)
-                        .updateUserData(firstname: controller?.text);
-                    break;
-                  case "Lastname":
-                    if (!context.mounted) return;
-                    await BlocProvider.of<UserDataCubit>(context)
-                        .updateUserData(lastname: controller?.text);
+                        .updateDisplayName(displayName: controller?.text);
                     break;
                   case "Email":
-                    if (!context.mounted) return;
-                    await BlocProvider.of<UserDataCubit>(context)
-                        .updateUserData(email: controller?.text);
-                    break;
-                  case "Mobile":
-                    if (!context.mounted) return;
-                    await BlocProvider.of<UserDataCubit>(context)
-                        .updateUserData(phone: controller?.text);
-                    break;
-                  case "Address":
-                    if (!context.mounted) return;
-                    await BlocProvider.of<UserDataCubit>(context)
-                        .updateUserData(address: controller?.text);
-                    break;
-                  case "Geburtstag":
-                    if (!context.mounted) return;
-                    if (birthday != null) {
+                    if (context.mounted && controller?.text != null) {
                       await BlocProvider.of<UserDataCubit>(context)
-                          .updateUserData(
-                              birthday:
-                                  DateFormat("yyyy-MM-dd").format(birthday!));
+                          .updateEmail(newEmail: controller?.text ?? "");
                     }
                     break;
                   default:
@@ -126,37 +96,20 @@ class _ProfilePersonalDataInputPageState
               padding: const EdgeInsets.symmetric(
                 horizontal: 20,
               ),
-              child: widget.title == "Birthday"
-                  ? SizedBox(
-                      height: 200,
-                      child: CupertinoDatePicker(
-                        mode: CupertinoDatePickerMode.date,
-                        initialDateTime: birthday,
-                        onDateTimeChanged: (DateTime newDateTime) {
-                          setState(
-                            () {
-                              isChanged = true;
-                              birthday = newDateTime;
-                            },
-                          );
-                        },
-                      ),
-                    )
-                  : TextField(
-                      controller: controller,
-                      keyboardType: widget.title == "Mobile"
-                          ? TextInputType.number
-                          : null,
-                      textInputAction: TextInputAction.done,
-                      onChanged: (value) => setState(
-                        () {
-                          isChanged = true;
-                        },
-                      ),
-                      onTapOutside: (event) {
-                        FocusManager.instance.primaryFocus?.unfocus();
-                      },
-                    ),
+              child: TextField(
+                controller: controller,
+                keyboardType:
+                    widget.title == "Mobile" ? TextInputType.number : null,
+                textInputAction: TextInputAction.done,
+                onChanged: (value) => setState(
+                  () {
+                    isChanged = true;
+                  },
+                ),
+                onTapOutside: (event) {
+                  FocusManager.instance.primaryFocus?.unfocus();
+                },
+              ),
             ),
             if (isLoading == true)
               const Align(

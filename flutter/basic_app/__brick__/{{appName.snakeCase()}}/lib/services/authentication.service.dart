@@ -50,65 +50,65 @@ class AuthenticationService {
     }
   }
 
-  Future<UserData> updateUserData({
-    String? email,
-    String? firstname,
-    String? lastname,
-    String? gender,
-    String? profilePhotoUrl,
-    String? phone,
-    String? address,
-    String? birthday,
-  }) async {
-    try {
-      Map<String, dynamic> data = {};
+  // Future<UserData> updateUserData({
+  //   String? email,
+  //   String? firstname,
+  //   String? lastname,
+  //   String? gender,
+  //   String? profilePhotoUrl,
+  //   String? phone,
+  //   String? address,
+  //   String? birthday,
+  // }) async {
+  //   try {
+  //     Map<String, dynamic> data = {};
 
-      if (email != null) data["email"] = email;
-      if (firstname != null) data["firstname"] = firstname;
-      if (lastname != null) data["lastname"] = lastname;
-      if (gender != null) data["gender"] = gender;
-      if (profilePhotoUrl != null) data["profilePhotoUrl"] = profilePhotoUrl;
-      if (phone != null) data["phone"] = phone;
-      if (address != null) data["address"] = address;
-      if (birthday != null) data["birthday"] = birthday;
+  //     if (email != null) data["email"] = email;
+  //     if (firstname != null) data["firstname"] = firstname;
+  //     if (lastname != null) data["lastname"] = lastname;
+  //     if (gender != null) data["gender"] = gender;
+  //     if (profilePhotoUrl != null) data["profilePhotoUrl"] = profilePhotoUrl;
+  //     if (phone != null) data["phone"] = phone;
+  //     if (address != null) data["address"] = address;
+  //     if (birthday != null) data["birthday"] = birthday;
 
-      final response = await api.updateUserData(data);
+  //     final response = await api.updateUserData(data);
 
-      return response;
-    } catch (err) {
-      return Future.error(err);
-    }
-  }
+  //     return response;
+  //   } catch (err) {
+  //     return Future.error(err);
+  //   }
+  // }
 
-  Future<UserData> convertAnonymous({
-    String? email,
-    String? firstname,
-    String? lastname,
-    String? gender,
-    String? profilePhotoUrl,
-    String? phone,
-    String? address,
-    String? birthday,
-  }) async {
-    try {
-      Map<String, dynamic> data = {};
+  // Future<UserData> convertAnonymous({
+  //   String? email,
+  //   String? firstname,
+  //   String? lastname,
+  //   String? gender,
+  //   String? profilePhotoUrl,
+  //   String? phone,
+  //   String? address,
+  //   String? birthday,
+  // }) async {
+  //   try {
+  //     Map<String, dynamic> data = {};
 
-      if (email != null) data["email"] = email;
-      if (firstname != null) data["firstname"] = firstname;
-      if (lastname != null) data["lastname"] = lastname;
-      if (gender != null) data["gender"] = gender;
-      if (profilePhotoUrl != null) data["profilePhotoUrl"] = profilePhotoUrl;
-      if (phone != null) data["phone"] = phone;
-      if (address != null) data["address"] = address;
-      if (birthday != null) data["birthday"] = birthday;
+  //     if (email != null) data["email"] = email;
+  //     if (firstname != null) data["firstname"] = firstname;
+  //     if (lastname != null) data["lastname"] = lastname;
+  //     if (gender != null) data["gender"] = gender;
+  //     if (profilePhotoUrl != null) data["profilePhotoUrl"] = profilePhotoUrl;
+  //     if (phone != null) data["phone"] = phone;
+  //     if (address != null) data["address"] = address;
+  //     if (birthday != null) data["birthday"] = birthday;
 
-      final response = await api.convertAnonymous(data);
+  //     final response = await api.convertAnonymous(data);
 
-      return response;
-    } catch (err) {
-      return Future.error(err);
-    }
-  }
+  //     return response;
+  //   } catch (err) {
+  //     return Future.error(err);
+  //   }
+  // }
 }
 
 AuthenticationService useAuthenticationService() {

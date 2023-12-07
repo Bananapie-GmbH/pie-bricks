@@ -54,83 +54,26 @@ class _ProfilePersonalDataPageState extends State<ProfilePersonalDataPage> {
             child: Column(
               children: [
                 createTileWidget(
-                  title: "Firstname",
-                  value: state.userData?.roleProfile?.firstname,
+                  title: "Username",
+                  value: state.userData?.displayName,
                   onTap: () {
                     AutoRouter.of(context).push(
                       ProfilePersonalDataInputRoute(
-                        title: "Firstname",
-                        value: state.userData?.roleProfile?.firstname,
+                        title: "Username",
+                        value: state.userData?.displayName,
                       ),
                     );
                   },
                   hasBottomBoarder: true,
                 ),
                 createTileWidget(
-                  title: "Lastname",
-                  value: state.userData?.roleProfile?.lastname,
-                  onTap: () {
-                    AutoRouter.of(context).push(
-                      ProfilePersonalDataInputRoute(
-                        title: "Lastname",
-                        value: state.userData?.roleProfile?.lastname,
-                      ),
-                    );
-                  },
-                  hasBottomBoarder: true,
-                ),
-                createTileWidget(
-                  title: "Firstname",
-                  value: state.userData?.roleProfile?.email,
+                  title: "Email",
+                  value: state.userData?.email,
                   onTap: () {
                     AutoRouter.of(context).push(
                       ProfilePersonalDataInputRoute(
                         title: "Email",
-                        value: state.userData?.roleProfile?.email,
-                      ),
-                    );
-                  },
-                  hasBottomBoarder: true,
-                ),
-                createTileWidget(
-                  title: "Mobile",
-                  value: state.userData?.roleProfile?.phone ?? "(optional)",
-                  onTap: () {
-                    AutoRouter.of(context).push(
-                      ProfilePersonalDataInputRoute(
-                        title: "Mobile",
-                        value: state.userData?.roleProfile?.phone,
-                      ),
-                    );
-                  },
-                  hasBottomBoarder: true,
-                ),
-                createTileWidget(
-                  title: "Address",
-                  value: state.userData?.roleProfile?.address ?? "(optional)",
-                  onTap: () {
-                    AutoRouter.of(context).push(
-                      ProfilePersonalDataInputRoute(
-                        title: "Address",
-                        value: state.userData?.roleProfile?.address,
-                      ),
-                    );
-                  },
-                  hasBottomBoarder: true,
-                ),
-                createTileWidget(
-                  title: "Birthday",
-                  value: state.userData?.roleProfile?.birthday != null
-                      ? DateFormat("yyyy-MM-dd").format(
-                          DateFormat("yyyy-MM-dd")
-                              .parse(state.userData!.roleProfile!.birthday!),
-                        )
-                      : "(optional)",
-                  onTap: () {
-                    AutoRouter.of(context).push(
-                      ProfilePersonalDataInputRoute(
-                        title: "Birthday",
-                        value: state.userData?.roleProfile?.birthday,
+                        value: state.userData?.email,
                       ),
                     );
                   },

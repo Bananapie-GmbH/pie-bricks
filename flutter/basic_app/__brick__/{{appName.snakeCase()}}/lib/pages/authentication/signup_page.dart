@@ -35,7 +35,7 @@ class _SignupPageState extends State<SignupPage> {
   AppBar buildAppBar() {
     return AppBar(
       centerTitle: true,
-      title: const Text("{{appName.titleCase()}}"),
+      title: const Text("Superpie"),
     );
   }
 
@@ -55,9 +55,9 @@ class _SignupPageState extends State<SignupPage> {
             email: emailController.text,
             password: passwordController.text,
           );
-
-          var userData =
-              await useAuthenticationService().signup(isAnonymous: false);
+          // Uncomment this after the Endpoint for that is implemented
+          // var userData =
+          //     await useAuthenticationService().signup(isAnonymous: false);
 
           setState(() {
             isRegistering = false;
@@ -192,7 +192,6 @@ class _SignupPageState extends State<SignupPage> {
                         cursorColor: Colors.black,
                         autocorrect: false,
                         style: const TextStyle(
-                          color: Colors.white,
                           fontWeight: FontWeight.w700,
                           fontSize: 12,
                         ),
@@ -257,6 +256,10 @@ class _SignupPageState extends State<SignupPage> {
                             }
                           }
                         },
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w700,
+                          fontSize: 12,
+                        ),
                         controller: passwordController,
                         cursorColor: Colors.black,
                         obscureText: !_passwordVisible,
@@ -284,7 +287,6 @@ class _SignupPageState extends State<SignupPage> {
                               _passwordVisible
                                   ? Icons.visibility
                                   : Icons.visibility_off,
-                              color: Colors.white,
                             ),
                             onPressed: () {
                               // Update the state i.e. toogle the state of passwordVisible variable
@@ -344,7 +346,7 @@ class _SignupPageState extends State<SignupPage> {
                       top: 0,
                       bottom: 0,
                     ),
-                    activeColor: Colors.white,
+                    activeColor: Colors.black,
                     onChanged: (bool? value) {
                       setState(() {
                         termsAndCondition = !termsAndCondition;
@@ -384,7 +386,7 @@ class _SignupPageState extends State<SignupPage> {
                       top: 0,
                       bottom: 0,
                     ),
-                    activeColor: Colors.white,
+                    activeColor: Colors.black,
                     onChanged: (bool? value) {
                       setState(() {
                         agb = !agb;

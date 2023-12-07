@@ -8,7 +8,7 @@ class UserDataState {
   });
 
   final bool isLoading;
-  final UserData? userData;
+  final User? userData;
 
   factory UserDataState.initialize() {
     return const UserDataState._(
@@ -18,7 +18,7 @@ class UserDataState {
 
   UserDataState copyWith({
     bool? isLoading,
-    UserData? userData,
+    User? userData,
   }) {
     return UserDataState._(
       isLoading: isLoading ?? this.isLoading,

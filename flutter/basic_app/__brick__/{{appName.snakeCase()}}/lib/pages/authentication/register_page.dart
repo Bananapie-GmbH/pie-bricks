@@ -38,7 +38,7 @@ class _RegisterPageState extends State<RegisterPage> {
   AppBar buildAppBar() {
     return AppBar(
       centerTitle: true,
-      title: const Text("{{appName.titleCase()}}"),
+      title: const Text("Superpie"),
       actions: [
         if (page == 2)
           GestureDetector(
@@ -50,8 +50,9 @@ class _RegisterPageState extends State<RegisterPage> {
                 });
                 final credential =
                     await FirebaseAuth.instance.signInAnonymously();
-                var userData =
-                    await useAuthenticationService().signup(isAnonymous: true);
+                // Uncomment this after the Endpoint for that is implemented
+                // var userData =
+                //     await useAuthenticationService().signup(isAnonymous: true);
 
                 setState(() {
                   isLoginIn = false;
@@ -272,10 +273,10 @@ class _RegisterPageState extends State<RegisterPage> {
 
                                     final userCredential =
                                         await signInWithApple();
-
-                                    var userData =
-                                        await useAuthenticationService()
-                                            .login(isAnonymous: false);
+                                    // Uncomment this after the Endpoint for that is implemented
+                                    // var userData =
+                                    //     await useAuthenticationService()
+                                    //         .login(isAnonymous: false);
 
                                     setState(() {
                                       isLoginIn = false;
@@ -328,9 +329,9 @@ class _RegisterPageState extends State<RegisterPage> {
                                     final userCredential =
                                         await signInWithGoogle();
                                     if (userCredential != null) {
-                                      var userData =
-                                          await useAuthenticationService()
-                                              .login(isAnonymous: false);
+                                      // var userData =
+                                      //     await useAuthenticationService()
+                                      //         .login(isAnonymous: false);
 
                                       setState(() {
                                         isLoginIn = false;
@@ -389,7 +390,7 @@ class _RegisterPageState extends State<RegisterPage> {
                               //       });
                               //       final userCredential =
                               //           await signInWithFacebook();
-
+                              // Uncomment this after the Endpoint for that is implemented
                               //       var userData =
                               //           await useAuthenticationService()
                               //               .login(isAnonymous: false);
