@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
@@ -24,7 +23,7 @@ void main() async {
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   // Stripe.publishableKey = Env.stripePublishableKey;
-  // Stripe.merchantIdentifier = 'merchant.com.hiddentable.de';
+  // Stripe.merchantIdentifier = 'merchant.{{packageName.lowerCase()}}';
   final appRouter = AppRouter();
   final BottomNavigationCubit bottomNavigationCubit = BottomNavigationCubit();
 
@@ -94,6 +93,7 @@ Future<void> _initializeFirebaseMessaging() async {
 }
 
 Future<void> _initializeFirebase() async {
+  // Initialize Firebase with firebase Cli
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );

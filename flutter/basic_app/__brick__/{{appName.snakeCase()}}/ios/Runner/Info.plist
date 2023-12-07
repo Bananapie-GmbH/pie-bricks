@@ -7,7 +7,7 @@
 		<key>CFBundleDevelopmentRegion</key>
 		<string>$(DEVELOPMENT_LANGUAGE)</string>
 		<key>CFBundleDisplayName</key>
-		<string>HiddenTable</string>
+		<string>{{appName}}</string>
 		<key>CFBundleExecutable</key>
 		<string>$(EXECUTABLE_NAME)</string>
 		<key>CFBundleIdentifier</key>
@@ -15,7 +15,7 @@
 		<key>CFBundleInfoDictionaryVersion</key>
 		<string>6.0</string>
 		<key>CFBundleName</key>
-		<string>hiddentable</string>
+		<string>{{appName}}</string>
 		<key>CFBundlePackageType</key>
 		<string>APPL</string>
 		<key>CFBundleShortVersionString</key>
@@ -36,12 +36,12 @@
 		</array>
 		<key>CFBundleVersion</key>
 		<string>$(FLUTTER_BUILD_NUMBER)</string>
-		<key>FacebookAppID</key>
+		<!-- <key>FacebookAppID</key>
 		<string>fb1436424687154630</string>
 		<key>FacebookClientToken</key>
 		<string>2278e5983fb61c6e2d39aa46f6115c59</string>
 		<key>FacebookDisplayName</key>
-		<string>HiddenTable</string>
+		<string>Your App Name</string> -->
 		<key>LSApplicationQueriesSchemes</key>
 		<array>
 			<string>comgooglemaps</string>
@@ -71,22 +71,6 @@
 		</array>
 		<key>LSRequiresIPhoneOS</key>
 		<true/>
-		<key>NSPhotoLibraryUsageDescription</key>
-		<string>$(PRODUCT_NAME) benötigt die Erlaubnis, auf Fotos und Videos auf Ihrem Gerät zuzugreifen.</string>
-		<key>NSMicrophoneUsageDescription</key>
-		<string>$(PRODUCT_NAME) erfordert keinen Zugriff auf das Mikrofon.</string>
-		<key>NSCalendarsUsageDescription</key>
-		<string>Greifen Sie auf die meisten Funktionen zum Anzeigen und Bearbeiten des Kalenders zu.</string>
-		<key>NSCameraUsageDescription</key>
-		<string>Diese App benötigt Zugriff auf Ihre Kamera, um Fotos und Videos aufzunehmen und mit anderen Benutzern zu teilen.</string>
-		<key>NSContactsUsageDescription</key>
-		<string>Greifen Sie auf Kontakte zu, um Veranstaltungsteilnehmer zu bearbeiten.</string>
-		<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-		<string>Um standortbasierte Empfehlungen anzubieten und Ihr Erlebnis zu verbessern, benötigt diese App Zugriff auf Ihren Standort, auch wenn die App nicht in Benutzung ist.</string>
-		<key>NSLocationAlwaysUsageDescription</key>
-		<string>Um standortspezifische Funktionen und Dienste anzubieten, benötigt diese App Zugriff auf Ihren Standort, während Sie die App verwenden.</string>
-		<key>NSLocationWhenInUseUsageDescription</key>
-		<string>Um standortspezifische Funktionen und Dienste anzubieten, benötigt diese App Zugriff auf Ihren Standort, während Sie die App verwenden.</string>
 		<key>UIApplicationSupportsIndirectInputEvents</key>
 		<true/>
 		<key>FlutterDeepLinkingEnabled</key>

@@ -1,5 +1,5 @@
-name: hiddentable
-description: A new Flutter project.
+name: {{appName}}
+description: Flutter Basic App.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -189,12 +189,12 @@ flutter:
   #     fonts:
   #       - asset: assets/fonts/TT-Ramillas-Bold.ttf
   #         weight: 600
-  #   - family: Hiddentable
+  #   - family: basicapp
   #     fonts:
-  #       - asset: assets/fonts/Hiddentable.ttf
-  #   - family: HiddentableCloche
+  #       - asset: assets/fonts/basicapp.ttf
+  #   - family: basicappCloche
   #     fonts:
-  #       - asset: assets/fonts/HiddentableCloche.ttf
-  #   - family: HiddentableIcons2
+  #       - asset: assets/fonts/basicappCloche.ttf
+  #   - family: basicappIcons2
   #     fonts:
-  #       - asset: assets/fonts/HiddentableIcons2.otf
+  #       - asset: assets/fonts/basicappIcons2.otf

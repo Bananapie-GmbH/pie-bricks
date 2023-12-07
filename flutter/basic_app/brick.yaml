@@ -29,5 +29,10 @@ vars:
   appName:
     type: string
     description: App name
-    default: Superpie
+    default: superpie
     prompt: What is the App name?
+  packageName:
+    type: string
+    description: Package name
+    default: com.superpie.de
+    prompt: What is the Package name?

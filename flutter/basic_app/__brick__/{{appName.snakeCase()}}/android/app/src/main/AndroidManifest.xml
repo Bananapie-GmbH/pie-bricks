@@ -1,11 +1,9 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"  xmlns:tools="http://schemas.android.com/tools" package="com.hiddentable.de">
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.READ_CALENDAR" />
-    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"  xmlns:tools="http://schemas.android.com/tools" package="{{packageName.lowerCase()}}">
+    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
     <uses-permission android:name="android.permission.INTERNET"/> 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> 
     <queries>
       <package android:name="com.instagram.android" />
       <package android:name="com.zhiliaoapp.musically" />
@@ -14,8 +12,8 @@
       <package android:name="org.telegram.messenger" />
       <package android:name="com.whatsapp" />
       <package android:name="com.twitter.android" />  
-      <provider android:authorities="com.facebook.katana.provider.PlatformProvider" />
-      <provider android:authorities="com.facebook.orca.provider.PlatformProvider" />
+      <!-- <provider android:authorities="com.facebook.katana.provider.PlatformProvider" />
+      <provider android:authorities="com.facebook.orca.provider.PlatformProvider" /> -->
     </queries>
     <queries>
       <intent>
@@ -24,18 +22,18 @@
       </intent>
     </queries>
     <application
-        android:label="HiddenTable"
+        android:label="{{appName}}"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
-
+<!-- 
         <provider android:name="com.facebook.FacebookContentProvider" android:authorities="com.facebook.app.FacebookContentProvider1436424687154630"
-             android:exported="true" />
-        <meta-data
+             android:exported="true" /> -->
+        <!-- <meta-data
         android:name="com.facebook.sdk.ApplicationId"
         android:value="@string/facebook_app_id" />
         <meta-data 
         android:name="com.facebook.sdk.ClientToken" 
-        android:value="@string/facebook_client_token"/>
+        android:value="@string/facebook_client_token"/> -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -68,7 +66,7 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="http" android:host="hiddentable.de" />
+                <!-- <data android:scheme="http" android:host="yourWebsite.de" /> -->
                 <data android:scheme="https" />
             </intent-filter>
         </activity>
@@ -77,9 +75,6 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
-        <meta-data android:name="com.google.android.geo.API_KEY"
-               android:value="AIzaSyBJwhcf6gJJFZ6gqRI63Py_F1PoMuUFLPM"/>
-
         <provider android:name="androidx.core.content.FileProvider" 
                android:authorities="${applicationId}.provider"
                android:exported="false" android:grantUriPermissions="true">
