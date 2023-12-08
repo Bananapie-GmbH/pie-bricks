@@ -84,10 +84,11 @@ class _ProfilePersonalDataPageState extends State<ProfilePersonalDataPage> {
                 ),
                 GestureDetector(
                   onTap: () async {
-                    if (await GoogleSignIn().isSignedIn()) {
-                      await GoogleSignIn().signOut();
-                    }
-                    await FacebookAuth.instance.logOut();
+                    // Uncomment after implementing Google Sign In and/or Facebook
+                    // if (await GoogleSignIn().isSignedIn()) {
+                    //   await GoogleSignIn().signOut();
+                    // }
+                    // await FacebookAuth.instance.logOut();
                     await FirebaseAuth.instance.signOut();
 
                     if (!mounted) return;

@@ -20,7 +20,6 @@ class _ProfileLegalPageState extends State<ProfileLegalPage> {
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w500,
-            color: Colors.white,
           ),
         ),
         elevation: 0,
