@@ -42,16 +42,15 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       ),
     );
   }
-  // uncomment this after implementing the endpoint
-  // Future<void> _updateFcmToken() async {
-  //   try {
-  //     final fcmToken = await FirebaseMessaging.instance.getToken();
-  //     if (fcmToken != null) {
 
-  //       useAuthenticationService().updateToken(fcmToken);
-  //     }
-  //   } catch (e) {
-  //     developer.log(e.toString());
-  //   }
-  // }
+  Future<void> _updateFcmToken() async {
+    try {
+      final fcmToken = await FirebaseMessaging.instance.getToken();
+      if (fcmToken != null) {
+        useAuthenticationService().updateToken(fcmToken);
+      }
+    } catch (e) {
+      developer.log(e.toString());
+    }
+  }
 }
